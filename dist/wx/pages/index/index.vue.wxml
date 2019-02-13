@@ -1,0 +1,10 @@
+<import src="/modules/mpvue-weui/src/button/index.vue.wxml" />
+<import src="/components/card.vue.wxml" />
+<import src="/modules/mpvue-weui/src/toast/index.vue.wxml" /><template name="c20ccf0a">
+  <view class="_div data-v-4bd51574 container"><template open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root, $for:{default:'data-v-4bd51574-default-0'},$slotdefault:'data-v-4bd51574-default-0'}}" is="0389ea8b"></template>
+    <view class="_div data-v-4bd51574 userinfo" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+      <image class="_img data-v-4bd51574 userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="_div data-v-4bd51574 userinfo-nickname"><template data="{{...$root[$kk+'1'], $root}}" is="6362ddbe"></template></view>
+    </view> <template type="primary" btnClass="mb15" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'2'], $root, $for:{default:'data-v-4bd51574-default-2'},$slotdefault:'data-v-4bd51574-default-2'}}" is="0389ea8b"></template> <template type="primary" btnClass="mb15" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'3'], $root, $for:{default:'data-v-4bd51574-default-3'},$slotdefault:'data-v-4bd51574-default-3'}}" is="0389ea8b"></template> <template value="{{showToast}}" bindchange="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'4'], $root}}" is="f288d56c"></template>
+  </view>
+</template>

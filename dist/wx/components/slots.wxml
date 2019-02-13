@@ -1,0 +1,7 @@
+<import src="/components/card.vue.wxml" />
+<import src="/modules/mpvue-weui/src/button/index.vue.wxml" />
+<import src="/components/card.vue.wxml" />
+<import src="/modules/mpvue-weui/src/toast/index.vue.wxml" />
+<template name="data-v-4bd51574-default-0">用户授权</template>
+<template name="data-v-4bd51574-default-2">加班打卡</template>
+<template name="data-v-4bd51574-default-3">下班打卡</template>

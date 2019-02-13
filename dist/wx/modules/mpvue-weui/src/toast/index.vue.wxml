@@ -1,0 +1,12 @@
+<template name="f288d56c">
+  <view class="_div data-v-66d504d4 weui-toast-content" hidden="{{!(showToast)}}">
+    <view class="_div data-v-66d504d4 weui-toast-detail {{type === 'default' ? '' : 'weui-toast-detail-icon'}}">
+      <view class="_div data-v-66d504d4 toast-icon" wx:if="{{type!='default'}}">
+        <icon type="success" size="40" wx:if="{{type==='success'}}" class="_icon data-v-66d504d4"></icon>
+        <icon type="warn" size="40" color="#FFBE00" wx:if="{{type==='warn'}}" class="_icon data-v-66d504d4"></icon>
+        <icon type="cancel" size="40" wx:if="{{type==='error'}}" class="_icon data-v-66d504d4"></icon>
+      </view>
+      <view class="_div data-v-66d504d4 toast-text">{{content}}</view>
+    </view>
+  </view>
+</template>
