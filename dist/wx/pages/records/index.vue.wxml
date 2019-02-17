@@ -1,0 +1,9 @@
+<template name="39f6c72b">
+  <view class="_div data-v-f18fcdb8">
+    <view class="_ul data-v-f18fcdb8">
+      <view wx:key="index" key="{{index}}" wx:for="{{records}}" wx:for-index="index" wx:for-item="record" class="_li data-v-f18fcdb8 {{[aa ? 'red' : '']}}">
+        {{index+1}} : {{record.start_time}} 到 {{record.finish_time}}
+      </view>
+    </view>
+  </view>
+</template>

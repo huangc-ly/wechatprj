@@ -13,8 +13,11 @@
 
     <mp-button type="primary"  btnClass="mb15" @click="Send2Srv_Work" :disabled="dis1">加班打卡</mp-button>
     <mp-button type="primary"  btnClass="mb15" @click="Send2Srv_Rest" :disabled="dis2">下班打卡</mp-button>
+    <mp-button type="primary"  btnClass="mb15" @click="GetOvertimeRecords">加班记录</mp-button>
+
 
     <mp-toast :type="warn"  v-model="showToast" :content="content" :duration="2000"></mp-toast>
+    <mp-toast :type="warn"  v-model="showToastLogin" :content="contentLogin" :duration="2000"></mp-toast>
 
   </div>
 </template>
@@ -35,8 +38,10 @@ export default {
       dis2: true,
       intervalNum: '',
       showToast: false,
+      showToastLogin: false,
       content: "60秒内不许再次打卡",
-      userInfo: {},
+      contentLogin: '未登录',
+      userInfo: 0,
       status: 1,
     }
   },
@@ -49,7 +54,21 @@ export default {
 
   methods: {
 
+    GetOvertimeRecords(){
+      if(this.userInfo == 0){
+        this.showToastLogin = true;
+        return;
+      }
+      wx.navigateTo({
+        url: '/pages/records/main?username='+this.userInfo
+      })
+    },
+
     Send2Srv_Rest(){
+      if(this.userInfo == 0){
+        this.showToastLogin = true;
+        return;
+      }
       this.finishTime = new Date().getTime();
       var that = this;
 
@@ -95,6 +114,10 @@ export default {
     },
 
     Send2Srv_Work(){
+      if(this.userInfo == 0){
+        this.showToastLogin = true;
+        return;
+      }
       this.startTime = new Date().getTime();
       var that = this;
 
@@ -217,8 +240,6 @@ export default {
       }
 
     })
-
-
 
   }
 
